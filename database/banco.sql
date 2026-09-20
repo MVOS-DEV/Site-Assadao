@@ -20,10 +20,10 @@
 -- Entidade Relacionamento).
 -- =====================================================================
 
-CREATE DATABASE IF NOT EXISTS assadao_do_ze
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+-- CREATE DATABASE IF NOT EXISTS assadao_do_ze
+-- CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-USE assadao_do_ze;
+-- USE assadao_do_ze;
 
 -- ---------------------------------------------------------------------
 -- Limpeza (útil ao reimportar o script durante o desenvolvimento)

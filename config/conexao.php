@@ -1,11 +1,10 @@
 <?php
 
 
-define('DB_HOST', 'localhost');       // ou o IP fixo do servidor de banco
-define('DB_NOME', 'assadao_do_ze');
-define('DB_USUARIO', 'root');
-define('DB_SENHA', '');
-
+define('DB_HOST', 'sql311.infinityfree.com');
+define('DB_NOME', 'if0_42967199_root');
+define('DB_USUARIO', 'if0_42967199');
+define('DB_SENHA', 'LkkLhjEs2XJHvmp');
 
 function conectarBanco(): PDO
 {
