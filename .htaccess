@@ -1,0 +1,18 @@
+# =====================================================================
+# [SISTEMAS OPERACIONAIS E REDES DE COMPUTADORES]
+# Item da rubrica: "Proibir listagem de diretórios"
+# =====================================================================
+
+# Impede que o Apache liste os arquivos de uma pasta quando não existe
+# um index.php nela (ex: acessar /assets/css/ diretamente no navegador).
+Options -Indexes
+
+# Impede acesso direto a arquivos sensíveis de configuração.
+<FilesMatch "\.(env|ini|log|sql)$">
+    Require all denied
+</FilesMatch>
+
+# Protege a pasta de configuração contra acesso direto pelo navegador.
+<IfModule mod_alias.c>
+    RedirectMatch 403 ^/config/.*$
+</IfModule>

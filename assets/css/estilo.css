@@ -1,0 +1,354 @@
+:root {
+    --laranja-principal: #FF6B00;
+    --laranja-escuro: #C94C00;
+    --laranja-claro: #FFA351;
+    --marrom-brasa: #3D2817;
+    --creme: #FFF8F0;
+}
+
+body {
+    background-color: var(--creme);
+    color: var(--marrom-brasa);
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+/* ---------- Logos (imagens reais da marca) ---------- */
+.logo-navbar {
+    height: 46px;
+    width: 46px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    padding: 2px;
+}
+
+.logo-rodape {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+.logo-marca-grande {
+    max-width: 320px;
+    width: 60%;
+    /* o arquivo original tem fundo branco; multiply "apaga" o branco
+       e deixa só o desenho colorido aparecer sobre qualquer fundo
+       CLARO (usado em Sobre, por exemplo). */
+    mix-blend-mode: multiply;
+}
+
+.logo-marca-hero {
+    max-width: 320px;
+    width: 60%;
+    /* Versão com fundo já removido (PNG transparente), usada sobre a
+       foto escura do hero - aqui NÃO usamos multiply, pois escureceria
+       as letras contra o fundo escuro. */
+}
+
+.selo-hero-central {
+    position: absolute;
+    top: -58px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24%;
+    max-width: 88px;
+    z-index: 2;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.logo-hero-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+/* ---------- Botão do WhatsApp ---------- */
+.btn-whatsapp {
+    background-color: #25d366;
+    border-color: #25d366;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 6px 16px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebc59;
+    border-color: #1ebc59;
+    color: #fff;
+}
+
+.whatsapp-flutuante {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    background-color: #25d366;
+    color: #fff;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    z-index: 1030;
+}
+
+.whatsapp-flutuante:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* ---------- Galeria de fotos reais ---------- */
+.card-galeria {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(61, 40, 23, 0.18);
+    position: relative;
+    height: 100%;
+}
+
+.card-galeria img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-galeria .galeria-legenda {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent);
+    color: #fff;
+    padding: 16px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: linear-gradient(90deg, var(--marrom-brasa), var(--laranja-escuro));
+}
+
+.navbar .nav-link {
+    color: #ffe8d6;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #fff;
+    border-bottom: 2px solid var(--laranja-principal);
+}
+
+.btn-laranja-outline {
+    border: 2px solid var(--laranja-principal);
+    color: #fff;
+    border-radius: 30px;
+    padding: 4px 18px;
+}
+
+.btn-laranja-outline:hover {
+    background-color: var(--laranja-principal);
+    color: #fff;
+}
+
+/* ---------- Botões ---------- */
+.btn-laranja {
+    background-color: var(--laranja-principal);
+    border-color: var(--laranja-principal);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-laranja:hover {
+    background-color: var(--laranja-escuro);
+    border-color: var(--laranja-escuro);
+    color: #fff;
+}
+
+/* ---------- Hero ---------- */
+/* Imagem de fundo (churrasqueira/brasa) escolhida pelo cliente, com um
+   degradê escuro por cima para a logo e o texto ficarem legíveis. */
+.hero {
+    position: relative;
+    background:
+        linear-gradient(rgba(20, 12, 6, 0.72), rgba(61, 40, 23, 0.75)),
+        url('../img/hero-fundo.jpg') center center / cover no-repeat;
+    color: #fff;
+    padding: 90px 0 70px;
+    overflow: visible;
+}
+
+.hero h1 {
+    font-weight: 800;
+}
+
+/* ---------- Cardápio de fim de semana (poster real) ---------- */
+.poster-cardapio {
+    max-width: 260px;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(61, 40, 23, 0.35);
+}
+
+/* ---------- Carrossel "Fique Ligado nas Novidades" ---------- */
+/* Mostra 3 imagens lado a lado por slide; o Bootstrap já anima a troca
+   com um deslize suave (transform/translateX) para o lado. */
+.carrossel-novidades {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carrossel-novidades .novidade-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(61, 40, 23, 0.28);
+    background-color: var(--marrom-brasa);
+    height: 100%;
+}
+
+.carrossel-novidades .novidade-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.carrossel-novidades .novidade-legenda {
+    color: #fff;
+    font-size: 0.82rem;
+    text-align: center;
+    margin: 0;
+    padding: 8px 10px;
+}
+
+.carrossel-novidades .carousel-control-prev,
+.carrossel-novidades .carousel-control-next {
+    width: 6%;
+}
+
+.carrossel-novidades .carousel-control-prev-icon,
+.carrossel-novidades .carousel-control-next-icon {
+    background-color: rgba(61, 40, 23, 0.6);
+    border-radius: 50%;
+    padding: 18px;
+}
+
+/* ---------- Destaques com foto real (sem cortar a imagem) ---------- */
+.slide-foto {
+    height: 380px;
+    background: linear-gradient(135deg, var(--laranja-escuro), var(--marrom-brasa));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.slide-foto img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Cards de produto/serviço ---------- */
+.card-produto {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(61, 40, 23, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.card-produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(61, 40, 23, 0.22);
+}
+
+.card-produto .card-img-top {
+    height: 160px;
+    background: linear-gradient(135deg, var(--laranja-claro), var(--laranja-principal));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+}
+
+/* Quando o produto tem foto real, ela substitui o fundo em gradiente */
+img.card-img-top {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
+}
+
+.preco {
+    color: var(--laranja-escuro);
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.badge-categoria {
+    background-color: var(--marrom-brasa);
+}
+
+/* ---------- Seções ---------- */
+.secao-titulo {
+    color: var(--laranja-escuro);
+    font-weight: 800;
+    border-left: 6px solid var(--laranja-principal);
+    padding-left: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.filtro-categoria .btn {
+    border-radius: 30px;
+    margin: 0 4px 8px 0;
+}
+
+/* ---------- Carrossel ---------- */
+.carousel-caption {
+    background: rgba(61, 40, 23, 0.55);
+    border-radius: 10px;
+    padding: 15px 25px;
+}
+
+.carousel-item .slide-bg {
+    height: 380px;
+    background: linear-gradient(135deg, var(--laranja-escuro), var(--marrom-brasa));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 14px;
+}
+
+/* ---------- Rodapé ---------- */
+footer {
+    background-color: var(--marrom-brasa);
+}
+
+footer a {
+    color: #ffd8b8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ---------- Formulários ---------- */
+.form-control:focus {
+    border-color: var(--laranja-principal);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.25);
+}
